@@ -4,7 +4,7 @@ import axios from 'axios'
 import Scene from '../components/Scene.jsx'
 import { useReveal } from '../hooks/useReveal.js'
 
-const API = 'https://paymaster-zero-backend.onrender.com
+const API = 'https://paymaster-zero-backend.onrender.com'
 
 const glass = {
   background: 'rgba(255,255,255,0.07)',
