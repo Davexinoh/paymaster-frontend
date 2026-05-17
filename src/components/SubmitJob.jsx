@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const API = 'https://3ffa6724-d44e-4e3d-889e-3ebdfe98f205-00-u8l4r6oqnkc4.riker.replit.dev'
+const API = 'https://paymaster-zero-backend.onrender.com'
 const TYPES = [{ id: 'code_review', label: 'Code Review', icon: '⌥' }, { id: 'content', label: 'Content', icon: '✦' }, { id: 'analysis', label: 'Analysis', icon: '◈' }]
 const LEVELS = [{ id: 'short', label: 'Short', price: 2, time: '15s' }, { id: 'medium', label: 'Medium', price: 5, time: '30s' }, { id: 'long', label: 'Long', price: 10, time: '45s' }]
 
