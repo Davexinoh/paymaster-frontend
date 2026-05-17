@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const API = 'https://3ffa6724-d44e-4e3d-889e-3ebdfe98f205-00-u8l4r6oqnkc4.riker.replit.dev'
+const API = 'https://paymaster-zero-backend.onrender.com'
 const glass = { background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.13)', borderTop: '1px solid rgba(255,255,255,0.22)', backdropFilter: 'blur(36px) saturate(200%)', WebkitBackdropFilter: 'blur(36px) saturate(200%)', borderRadius: 22, boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.12), 0 24px 72px rgba(0,0,0,0.5)' }
 
 export default function AgentStatus() {
