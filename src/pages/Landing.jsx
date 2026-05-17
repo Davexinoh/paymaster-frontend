@@ -66,34 +66,42 @@ export default function Landing() {
         </R>
 
         {/* Hero */}
-        <div style={{ marginBottom: 56 }}>
-          <R delay={0.05}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: 10, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 28, fontWeight: 400 }}>
-              <div style={{ width: 30, height: 1, background: 'rgba(255,255,255,0.2)' }} />
-              Kite Chain · x402 Protocol
-            </div>
-          </R>
-          <R delay={0.1}>
-            <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 46, lineHeight: 1.03, letterSpacing: '-0.03em', color: 'rgba(255,255,255,0.93)', marginBottom: 22 }}>
-              The Agent<br />That{' '}
-              <span style={{ background: 'linear-gradient(135deg, #a78bfa 0%, #34d399 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                Works.<br />Gets Paid.
-              </span>
-            </h1>
-          </R>
-          <R delay={0.15}>
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.3)', lineHeight: 1.9, maxWidth: 300, marginBottom: 36, fontWeight: 300, letterSpacing: '0.01em' }}>
-              A fully autonomous commercial agent. Evaluates jobs, locks escrow onchain, executes via AI, and settles payment — without a human middleman.
-            </p>
-          </R>
-          <R delay={0.2}>
-            <button onClick={() => navigate('/auth')} style={{ padding: '14px 28px', borderRadius: 12, border: 'none', background: 'rgba(255,255,255,0.92)', color: '#080810', fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: '0.07em', textTransform: 'uppercase', boxShadow: '0 4px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.5)', transition: 'all 0.18s' }}
-              onMouseEnter={e => { e.target.style.background = '#fff'; e.target.style.transform = 'translateY(-1px)' }}
-              onMouseLeave={e => { e.target.style.background = 'rgba(255,255,255,0.92)'; e.target.style.transform = 'translateY(0)' }}>
-              Launch App →
-            </button>
-          </R>
+<div style={{ marginBottom: 56 }}>
+  <R delay={0.05}>
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: 10, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 28, fontWeight: 400 }}>
+      <div style={{ width: 30, height: 1, background: 'rgba(255,255,255,0.2)' }} />
+      Kite Chain · x402 Protocol
+    </div>
+  </R>
+  <R delay={0.1}>
+    <h1 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 38, lineHeight: 1.05, letterSpacing: '-0.03em', color: 'rgba(255,255,255,0.93)', marginBottom: 22 }}>
+      AI Agents That<br />Complete Work and<br />
+      <span style={{ background: 'linear-gradient(135deg, #a78bfa 0%, #34d399 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+        Get Paid Onchain.
+      </span>
+    </h1>
+  </R>
+  <R delay={0.15}>
+    <div style={{ marginBottom: 36 }}>
+      {[
+        'Evaluates jobs autonomously',
+        'Locks escrow via x402 protocol',
+        'Executes via Groq + Gemini AI',
+        'Settles payment onchain, no middleman',
+      ].map((line, i) => (
+        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+          <div style={{ width: 4, height: 4, borderRadius: '50%', background: 'rgba(94,234,212,0.6)', flexShrink: 0 }} />
+          <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', fontWeight: 300, letterSpacing: '0.01em' }}>{line}</span>
         </div>
+      ))}
+    </div>
+  </R>
+  <R delay={0.2}>
+    <button onClick={() => navigate('/auth')} style={{ padding: '14px 28px', borderRadius: 12, border: 'none', background: 'rgba(255,255,255,0.92)', color: '#080810', fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: '0.07em', textTransform: 'uppercase', boxShadow: '0 4px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.5)', transition: 'all 0.18s' }}>
+      Deploy Your Agent →
+    </button>
+  </R>
+</div>
 
         {/* Stats */}
         <R>
@@ -128,8 +136,8 @@ export default function Landing() {
           <div style={{ ...glass, overflow: 'hidden', marginBottom: 32 }}>
             {[
               { n: '01', t: 'Submit a Job', d: 'Describe your task. The agent evaluates complexity and quotes a price onchain.' },
-              { n: '02', t: 'Lock Escrow', d: 'Funds lock via x402 protocol. No payment, no execution. Ever.' },
-              { n: '03', t: 'Agent Executes', d: 'Groq + Gemini synthesis pipeline processes your task and delivers the result.' },
+              { n: '02', t: 'Lock Escrow', d: 'Funds lock via x402 protocol.' },
+              { n: '03', t: 'Agent Executes', d: 'Agent synthesis pipeline processes your task and delivers the result.' },
               { n: '04', t: 'Payment Settles', d: 'Approve delivery. Escrow releases to agent wallet. Reputation updates onchain.' },
             ].map((s, i, arr) => (
               <div key={s.n} style={{ display: 'flex', gap: 20, padding: '21px 24px', borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.18s', cursor: 'default' }}
